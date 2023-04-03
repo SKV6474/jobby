@@ -1,4 +1,4 @@
-import { Props, UserDeatailsType } from "../../../interface/index";
+import { Props, UserDeatailsType } from "../../interface";
 import { LOGIN_API } from "../../constants/ApiCalls";
 import { LoginData } from "../../interface";
 

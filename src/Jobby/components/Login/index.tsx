@@ -2,9 +2,8 @@ import Cookies from "js-cookie";
 import { Redirect } from "react-router-dom";
 import AuthLogin from "../../../Authentication/components/AuthLogin";
 import LogoImg from "../../../Common/component/logoImg";
-// import LogoImg from "../../../Common/components/logoImg";
 
-import { LoginComponentProp } from "../../../interface/index";
+import { LoginComponentProp } from "../../interface/index";
 
 import {
   AppDiv,
@@ -12,7 +11,6 @@ import {
   LoginWrapper,
   LogoImgContainer,
 } from "./styledComponents";
-// import { getFromLocalStorage } from "../../utils";
 
 const LoginComponent = (props: LoginComponentProp) => {
   const { onSubmitForm, HistoryProp } = props;

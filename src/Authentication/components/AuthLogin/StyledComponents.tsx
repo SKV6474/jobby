@@ -31,6 +31,7 @@ export const Label = styled.label`
 
 export const LoginBtn = styled.button`
   background-color: #6366f1;
+  cursor: pointer;
   color: #fff;
   font-size: 16px;
   width: 100%;

@@ -1,6 +1,6 @@
 // import { observer } from "mobx-react";
 
-import { Props, UserDeatailsType } from "../../../interface/index";
+import { Props, UserDeatailsType } from "../../interface";
 import LoginComponent from "../../../Jobby/components/Login";
 
 import { LoginApi } from "../../services/AuthService/index.api";

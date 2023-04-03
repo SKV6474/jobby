@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-// import { useTranslation } from "react-i18next";
-import { LoginComponent, UserDeatailsType } from "../../../interface";
+import { LoginComponent, UserDeatailsType } from "../../interface";
 import { ErrorP, Input, InputDiv, Label, LoginBtn } from "./StyledComponents";
 
 const AuthLogin = (props: LoginComponent): any => {

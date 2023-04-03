@@ -1,5 +1,4 @@
 import { Route } from "react-router-dom";
-import ProtectedRoute from "../components/ProtectedRoute";
 
 import { LOGIN } from "../constants/Path";
 

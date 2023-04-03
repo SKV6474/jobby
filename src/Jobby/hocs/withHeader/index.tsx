@@ -10,7 +10,7 @@ const WithHeader = (WrappedComponent: React.ComponentType<any>) => {
         <Header {...props} />
         <WrappedComponentContainer>
           <MaxWidthDiv>
-            <WrappedComponent />
+            <WrappedComponent {...props} />
           </MaxWidthDiv>
         </WrappedComponentContainer>
       </>

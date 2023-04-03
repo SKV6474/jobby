@@ -15,8 +15,8 @@ class ProfileStore {
       const Response = await ProfileApi();
 
       if (Response.data !== "none") {
-        console.log("Mobx", Response.data.profile_details);
         this.ProfileDetail = Response.data;
+        this.ApiStatus = Response.ApiStatus;
       } else {
         this.ApiStatus = ApiStatus.failure;
       }

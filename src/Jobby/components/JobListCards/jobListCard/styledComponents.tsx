@@ -10,7 +10,7 @@ export const JobDescriptionListLink = styled(NavLink)`
 export const CardContainer = styled.div`
   display: flex;
   flex-direction: column;
-  height: 275px;
+  /* height: 275px; */
   border-radius: 10px;
   padding: 30px 20px;
   background-color: #202020;

@@ -71,3 +71,21 @@ export type JobDescriptionData = {
   job_details: JobDescriptionCompanyDetails;
   similar_jobs: SimilarJobObject[];
 };
+
+export type LogoTitleContainerProps = {
+  companyLogo: string;
+  title: string;
+  rating: number;
+};
+
+export type LocationEmploymentTypeProps = {
+  EmploymentType: string;
+  Location: string;
+};
+
+export type SideBarProps = {
+  ProfileDetail: ProfileObjectType;
+  apiStatus: ApiStatus;
+  onChangePackage: (Array: string[]) => void;
+  onChangeEmployment: (Array: string[]) => void;
+};

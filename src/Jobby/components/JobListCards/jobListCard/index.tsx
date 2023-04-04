@@ -1,20 +1,16 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import LocationEmploymentType from "./LocationEmploymentType";
+
 import { JobListType } from "../../../interface";
+
+import LocationEmploymentType from "./LocationEmploymentType";
 import LogoTitleContainer from "./LogoTitle";
 import {
   CardContainer,
   Description,
   DescriptionTitle,
-  Icons,
   JobDescriptionListLink,
   LinkBreak,
   LocationETypePackage,
-  Logo,
-  LogoContainer,
-  TitleContainer,
-  TitleRatingContainer,
 } from "./styledComponents";
 
 const JobCard = (props: { jobData: JobListType }) => {

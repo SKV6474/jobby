@@ -1,8 +1,6 @@
-// import { observer } from "mobx-react";
-
-import { Props, UserDeatailsType } from "../../interface";
 import LoginComponent from "../../../Jobby/components/Login";
 
+import { Props, UserDeatailsType } from "../../interface";
 import { LoginApi } from "../../services/AuthService/index.api";
 
 const LoginRoute = (props: Props) => {

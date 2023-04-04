@@ -45,3 +45,13 @@ export const LoaderWrapperContainerForJobList = `
    height:calc(100vh - 185px);
   
 `;
+
+export const NoSearchResultContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 185px);
+  @media screen and (max-width: 768px) {
+    height: auto;
+  }
+`;

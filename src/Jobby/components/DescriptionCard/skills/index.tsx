@@ -1,5 +1,7 @@
 import React from "react";
+
 import { SkillsObject } from "../../../interface";
+
 import {
   SkillContainerDiv,
   SkillImg,

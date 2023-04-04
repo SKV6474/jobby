@@ -1,5 +1,7 @@
 import React from "react";
+
 import { SimilarJobObject } from "../../interface";
+
 import SimiliarJobCard from "./SmiliarJobCard";
 import { SimiliarCardContainer, SmiliarJobTitle } from "./styledComponents";
 

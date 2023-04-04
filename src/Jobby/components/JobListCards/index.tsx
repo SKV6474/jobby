@@ -1,5 +1,7 @@
 import React from "react";
+
 import { JobListType } from "../../interface";
+
 import JobCard from "./jobListCard";
 import { AllJobCardContainer } from "./styledComponents";
 

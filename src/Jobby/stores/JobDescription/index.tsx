@@ -1,4 +1,5 @@
 import { action, observable } from "mobx";
+
 import { ApiStatus } from "../../interface";
 import { FetchJobFullDetail } from "../../services/JobFullDescription/index.api";
 

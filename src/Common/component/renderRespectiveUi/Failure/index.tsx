@@ -1,4 +1,6 @@
 import React from "react";
+import "styled-components/macro";
+
 import { FAILURE_VIEW_LIGHT } from "../../../constants/Images";
 
 import {
@@ -10,7 +12,7 @@ import {
   RetryBtn,
   RetryBtnContainer,
 } from "./styledComponets";
-import "styled-components/macro";
+
 const Failure = (css: string, type: string) => {
   if (type === "profile") {
     return (

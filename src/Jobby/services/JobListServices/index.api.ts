@@ -1,28 +1,25 @@
 import Cookies from "js-cookie";
-import { ApiStatus } from "../../interface";
 
-const handleResponse = async (response: any) => {
-  if (response.ok) {
-    const data = await response.json();
-    const Response = {
-      data: data,
-      ApiStatus: ApiStatus.success,
-    };
-    return Response;
+import { JOBS_API } from "../../constants/ApiCalls";
+import { handleResponse } from "../../utils";
+
+export const callJobList = async (input: string[]) => {
+  if (input.length > 0) {
+    const Response = await fetch(
+      `https://apis.ccbp.in/jobs?${input.join("&")}`,
+      {
+        method: "GET",
+        headers: { Authorization: `Bearer ${Cookies.get("jwt_token")}` },
+      }
+    );
+
+    return handleResponse(Response);
   } else {
-    const Response = {
-      data: "none",
-      ApiStatus: ApiStatus.failure,
-    };
-    return Response;
+    const Response = await fetch(JOBS_API, {
+      method: "GET",
+      headers: { Authorization: `Bearer ${Cookies.get("jwt_token")}` },
+    });
+
+    return handleResponse(Response);
   }
-};
-
-export const callJobList = async () => {
-  const Response = await fetch("https://apis.ccbp.in/jobs", {
-    method: "GET",
-    headers: { Authorization: `Bearer ${Cookies.get("jwt_token")}` },
-  });
-
-  return handleResponse(Response);
 };

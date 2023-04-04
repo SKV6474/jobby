@@ -1,5 +1,8 @@
 import React from "react";
+
+import { JOB_ROUTE } from "../../constants/Path";
 import { Props } from "../../interface";
+
 import {
   ContentContainer,
   DescriptionContainer,
@@ -18,7 +21,7 @@ const Home = (props: Props) => {
           reviews. Find the job that fits your abilities and potential.
         </DescriptionContainer>
         <div>
-          <Link to="/jobs">Find Jobs</Link>
+          <Link to={JOB_ROUTE}>Find Jobs</Link>
         </div>
       </ContentContainer>
     </HomeContainer>

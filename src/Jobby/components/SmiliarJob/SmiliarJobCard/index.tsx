@@ -1,7 +1,10 @@
 import React from "react";
+
 import { SimilarJobObject } from "../../../interface";
+
 import LocationEmploymentType from "../../JobListCards/jobListCard/LocationEmploymentType";
 import LogoTitleContainer from "../../JobListCards/jobListCard/LogoTitle";
+
 import {
   LogoTitleContainerDiv,
   SimiliarJobDetailsContainer,

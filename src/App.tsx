@@ -1,8 +1,7 @@
 import React from "react";
-import { BrowserRouter, Switch } from "react-router-dom";
+import { BrowserRouter, Redirect, Switch } from "react-router-dom";
 import { AuthenticationRoute } from "./Authentication/routes";
 import { JobbyAllRouteContainer } from "./Jobby/routes";
-import logo from "./logo.svg";
 
 function App() {
   return (
@@ -10,7 +9,7 @@ function App() {
       <Switch>
         {AuthenticationRoute}
         {JobbyAllRouteContainer}
-        {/* <Redirect to="/not-found" /> */}
+        <Redirect to="/not-found" />
       </Switch>
     </BrowserRouter>
   );

@@ -1,7 +1,7 @@
 import { action, observable } from "mobx";
-import { ApiStatus } from "../../interface";
-import { ProfileObjectType } from "../../interface";
-import { ProfileApi } from "../../services/index.api";
+
+import { ApiStatus, ProfileObjectType } from "../../interface";
+import { ProfileApi } from "../../services/ProfileApi/index.api";
 
 class ProfileStore {
   @observable ProfileDetail: ProfileObjectType = {

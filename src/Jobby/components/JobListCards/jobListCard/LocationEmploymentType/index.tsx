@@ -1,11 +1,12 @@
 import React from "react";
+
+import { LocationEmploymentTypeProps } from "../../../../interface";
+
 import { Icons, LocationEType } from "./styledComponents";
 
-const LocationEmploymentType = (props: {
-  EmploymentType: string;
-  Location: string;
-}) => {
+const LocationEmploymentType = (props: LocationEmploymentTypeProps) => {
   const { EmploymentType, Location } = props;
+
   return (
     <div>
       <LocationEType>

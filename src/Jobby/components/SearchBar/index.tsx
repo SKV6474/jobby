@@ -1,21 +1,35 @@
-import React from "react";
+import React, { useState } from "react";
+
 import {
   SearchImageContainer,
   SearchImg,
   SearchInput,
 } from "./styledComponents";
 
-const Searchinput = () => {
+const Searchinput = (props: { onChange: (input: string) => void }) => {
+  const { onChange } = props;
+
+  const [searchValue, setSearchValue] = useState<string>("");
+
+  const handleSearch = () => {
+    onChange(searchValue);
+  };
+
+  const handleSearchEvent = (e: any) => {
+    setSearchValue(e.target.value);
+    if (e.key === "Enter") {
+      handleSearch();
+    }
+  };
   return (
     <SearchImageContainer>
       <SearchInput
-        type="search"
         placeholder="Search"
-        id="SearchInput"
-        // onKeyUp={handleSearchEvent}
+        id="Value"
+        onKeyUp={handleSearchEvent}
       ></SearchInput>
       <SearchImg
-        // onClick={handleSearchFetch}
+        onClick={handleSearch}
         className="fa-solid fa-magnifying-glass"
       ></SearchImg>
     </SearchImageContainer>

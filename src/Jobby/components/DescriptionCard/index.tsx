@@ -1,13 +1,16 @@
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
+
 import { JobDescriptionCompanyDetails, SkillsObject } from "../../interface";
+
 import LocationEmploymentType from "../JobListCards/jobListCard/LocationEmploymentType";
 import LogoTitleContainer from "../JobListCards/jobListCard/LogoTitle";
 import {
   LinkBreak,
   LocationETypePackage,
 } from "../JobListCards/jobListCard/styledComponents";
+
 import Skills from "./skills";
+
 import {
   DescriptionCardContainer,
   DescriptionDetailsContainer,
@@ -77,7 +80,7 @@ const JobDescriptionCard = (props: {
         <LifeAtCompanyDescriptionContainer>
           <div>{life_at_company.description}</div>
           <LifeCultureImgContainer>
-            <img src={life_at_company.image_url}></img>
+            <img src={life_at_company.image_url} alt="Life At Company"></img>
           </LifeCultureImgContainer>
         </LifeAtCompanyDescriptionContainer>
       </div>

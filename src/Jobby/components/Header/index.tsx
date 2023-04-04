@@ -1,8 +1,11 @@
 import React from "react";
 
 import LogoImg from "../../../Common/component/logoImg";
+
+import { HOME, JOB_ROUTE } from "../../constants/Path";
 import { Props } from "../../interface";
 import { RemoveCookies } from "../../utils";
+
 import {
   HeaderContainer,
   HeaderWrapper,
@@ -30,17 +33,17 @@ const Header = (props: Props) => {
         </div>
         <LinkContainer>
           <div>
-            <Links to="/">Home</Links>
+            <Links to={HOME}>Home</Links>
           </div>
           <div>
-            <Links to="/jobs">Jobs</Links>
+            <Links to={JOB_ROUTE}>Jobs</Links>
           </div>
         </LinkContainer>
         <IconContainerDiv>
-          <IconLinks to="/">
+          <IconLinks to={HOME}>
             <i className="fa-solid fa-house"></i>
           </IconLinks>
-          <IconLinks to="/jobs">
+          <IconLinks to={JOB_ROUTE}>
             <i className="fa-solid fa-briefcase"></i>
           </IconLinks>
           <LogoutIcon

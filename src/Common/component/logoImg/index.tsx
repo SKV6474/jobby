@@ -1,13 +1,13 @@
-import { ImgDiv, Logoimg } from "./styledComponents";
 import "styled-components/macro";
+
+import { LOGO_IMG } from "../../constants/Images";
+
+import { ImgDiv, Logoimg } from "./styledComponents";
 
 const LogoImg = () => {
   return (
     <ImgDiv>
-      <Logoimg
-        src="https://assets.ccbp.in/frontend/react-js/logo-img.png"
-        alt="logo"
-      ></Logoimg>
+      <Logoimg src={LOGO_IMG} alt="logo"></Logoimg>
     </ImgDiv>
   );
 };

@@ -1,6 +1,7 @@
-import { ThreeDots } from "react-loader-spinner";
-import { LoaderContainer } from "./styledComponents";
 import "styled-components/macro";
+import { ThreeDots } from "react-loader-spinner";
+
+import { LoaderContainer } from "./styledComponents";
 
 const Loader = (css: string) => {
   return (

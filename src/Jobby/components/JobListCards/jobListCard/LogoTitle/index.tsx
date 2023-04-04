@@ -1,4 +1,7 @@
 import React from "react";
+
+import { LogoTitleContainerProps } from "../../../../interface";
+
 import {
   Icons,
   Logo,
@@ -7,11 +10,7 @@ import {
   TitleRatingContainer,
 } from "../styledComponents";
 
-const LogoTitleContainer = (props: {
-  companyLogo: string;
-  title: string;
-  rating: number;
-}) => {
+const LogoTitleContainer = (props: LogoTitleContainerProps) => {
   const { companyLogo, title, rating } = props;
 
   return (

@@ -1,6 +1,9 @@
 import React from "react";
+
 import Header from "../../components/Header";
+
 import { Props } from "../../interface";
+
 import { MaxWidthDiv, WrappedComponentContainer } from "./styledComponents";
 
 const WithHeader = (WrappedComponent: React.ComponentType<any>) => {

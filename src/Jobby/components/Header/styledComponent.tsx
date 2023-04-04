@@ -50,6 +50,7 @@ export const IconLinks = styled(NavLink)`
 `;
 
 export const LogoutBtn = styled.button`
+  cursor: pointer;
   padding: 10px 25px;
   background-color: #6366f1;
   border: 0;
@@ -62,6 +63,7 @@ export const LogoutBtn = styled.button`
 `;
 
 export const LogoutIcon = styled.i`
+  cursor: pointer;
   display: none;
   color: #fff;
   font-size: 18px;

@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Logo Img Logo Img SnapShot 1`] = `
+<div
+  className="sc-jTrPJq etA-DwL"
+>
+  <div
+    className="sc-beqWaB iXlEcV"
+  >
+    <img
+      alt="Not Found"
+      className="sc-gueYoa iYHUMi"
+      src="https://assets.ccbp.in/frontend/react-js/jobby-app-not-found-img.png"
+    />
+    <div
+      className="sc-dmqHEX eHzspH"
+    >
+      <div
+        className="sc-hLseeU bBlhFm"
+      >
+        Page Not Found
+      </div>
+      <div
+        className="sc-eDDNvR iCKCUL"
+      >
+        We are sorry, the page you requested could not be found
+      </div>
+    </div>
+  </div>
+</div>
+`;

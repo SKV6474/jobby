@@ -2,7 +2,7 @@ import React from "react";
 import { Redirect, Route } from "react-router-dom";
 import Cookies from "js-cookie";
 
-import { LOGIN } from "../../constants/Path";
+import { LOGIN } from "../../constants/Navigation";
 
 const ProtectedRoute = (props: any) => {
   const jwtToken = Cookies.get("jwt_token");

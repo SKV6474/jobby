@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="sc-beqWaB ehFqut"
+>
+  <img
+    alt="No Jobs"
+    className="sc-gueYoa uNjpV"
+    src="https://assets.ccbp.in/frontend/react-js/no-jobs-img.png"
+  />
+  <div
+    className="sc-dmqHEX dDHHHW"
+  >
+    No Jobs Found"
+  </div>
+  <div
+    className="sc-hLseeU cLyjGe"
+  >
+    We could not find any jobs. Try other filters.
+  </div>
+</div>
+`;

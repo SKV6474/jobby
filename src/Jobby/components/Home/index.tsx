@@ -1,7 +1,6 @@
 import React from "react";
 
 import { JOB_ROUTE } from "../../constants/Path";
-import { Props } from "../../interface";
 
 import {
   ContentContainer,
@@ -11,7 +10,7 @@ import {
   TitleContainer,
 } from "./styledComponents";
 
-const Home = (props: Props) => {
+const Home = () => {
   return (
     <HomeContainer>
       <ContentContainer>

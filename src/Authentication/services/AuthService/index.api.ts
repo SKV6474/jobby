@@ -1,10 +1,9 @@
-import { Props, UserDeatailsType } from "../../interface";
+import { UserDeatailsType } from "../../interface";
 import { LOGIN_API } from "../../constants/ApiCalls";
 import { LoginData } from "../../interface";
 
 export const LoginApi = async (
-  userDetails: UserDeatailsType,
-  props: Props
+  userDetails: UserDeatailsType
 ): Promise<LoginData> => {
   const response = await fetch(LOGIN_API, {
     method: "POST",

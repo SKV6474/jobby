@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="sc-beqWaB gbBvTZ"
+>
+  <input
+    className="sc-gueYoa hJIGrp"
+    id="Value"
+    onKeyUp={[Function]}
+    placeholder="Search"
+  />
+  <i
+    className="sc-dmqHEX gLYtcS fa-solid fa-magnifying-glass"
+    onClick={[Function]}
+  />
+</div>
+`;

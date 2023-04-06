@@ -41,16 +41,26 @@ const AuthLogin = (props: LoginComponent): JSX.Element => {
         {/* UserName input */}
         <InputDiv>
           <Label>USERNAME</Label>
-          <Input placeholder="Username" onChange={handleUserName} />
+          <Input
+            id="usernameType"
+            name="username"
+            placeholder="Username"
+            onChange={handleUserName}
+          />
         </InputDiv>
 
         {/* Password Input */}
         <InputDiv>
           <Label>PASSWORD</Label>
-          <Input placeholder="Password" onChange={handlePassword} />
+          <Input
+            id="PasswordType"
+            name="password"
+            placeholder="Password"
+            onChange={handlePassword}
+          />
         </InputDiv>
 
-        <LoginBtn type="submit">
+        <LoginBtn id="LoginBtn" type="submit">
           <b>Login</b>
         </LoginBtn>
 

@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Logo Img Logo Img SnapShot 1`] = `
+<div
+  className="sc-beqWaB ekvAZh"
+>
+  <img
+    alt="logo"
+    className="sc-gueYoa jORccO"
+    src="https://assets.ccbp.in/frontend/react-js/logo-img.png"
+  />
+</div>
+`;

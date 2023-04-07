@@ -17,3 +17,10 @@ export type LoginComponent = {
 };
 
 export type Props = RouteComponentProps<{ id: string }>;
+
+export enum ApiStatus {
+  initial = "initial",
+  loading = "loading",
+  success = "success",
+  failure = "failure",
+}

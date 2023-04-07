@@ -17,5 +17,9 @@
     "noEmit": true,
     "jsx": "react-jsx"
   },
-  "include": ["src"]
+  "include": [
+    "src",
+    "src/Authentication/components/AuthLogin/stepper.tsx",
+    "cypress.d.ts"
+  ]
 }

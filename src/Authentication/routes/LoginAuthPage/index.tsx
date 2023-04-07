@@ -2,10 +2,11 @@ import LoginComponent from "../../../Jobby/components/Login";
 
 import { Props, UserDeatailsType } from "../../interface";
 import { LoginApi } from "../../services/AuthService/index.api";
+import { loginStore } from "../../AuthStore";
 
 const LoginRoute = (props: Props) => {
   const handleSubmit = async (userDetails: UserDeatailsType) => {
-    return await LoginApi(userDetails, props);
+    return await LoginApi(userDetails);
   };
 
   return <LoginComponent onSubmitForm={handleSubmit} HistoryProp={props} />;

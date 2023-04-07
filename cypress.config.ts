@@ -7,12 +7,12 @@ export default defineConfig({
     },
     baseUrl: "http://localhost:3000/",
   },
+  component: {
+    devServer: {
+      framework: "create-react-app",
+      bundler: "webpack",
+    },
+
+    specPattern: "./src/",
+  },
 });
-
-// import { defineConfig } from 'cypress'
-
-// export default defineConfig({
-//   e2e: {
-
-//   },
-// })

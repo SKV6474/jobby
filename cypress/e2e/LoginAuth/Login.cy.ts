@@ -1,6 +1,7 @@
 describe("The Login Page", () => {
   beforeEach(() => {
     // cy.exec("npm run db:reset && npm run db:seed");
+
     cy.visit("http://localhost:3000/");
 
     cy.request("POST", "https://apis.ccbp.in/login", {

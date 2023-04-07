@@ -6,7 +6,6 @@ export const RemoveCookies = () => {
 };
 
 export const handleResponse = async (response: any) => {
-  console.log(response);
   if (response.ok) {
     const data = await response.json();
     const Response = {

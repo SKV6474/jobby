@@ -9,7 +9,7 @@ describe("For Profile Store", () => {
     });
   });
 
-  it("For Fetching", async () => {
+  test("For Fetching", async () => {
     const store = new ProfileStore();
     try {
       await store.fetchProfile();

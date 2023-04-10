@@ -14,3 +14,7 @@ export const profileObjectFixtureDataForFailure = {
   data: "none",
   ApiStatus: "failure",
 };
+
+export const ProfileFixtureApi = () => {
+  return profileObjectFixtureData;
+};

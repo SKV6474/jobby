@@ -13,6 +13,6 @@ export default defineConfig({
       bundler: "webpack",
     },
 
-    specPattern: "./src/",
+    specPattern: "./cypress/e2e/Home.cy.ts",
   },
 });

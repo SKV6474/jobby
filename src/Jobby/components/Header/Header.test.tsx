@@ -5,7 +5,7 @@ import Cookies from "js-cookie";
 import { JSDOM } from "jsdom";
 
 const dom = new JSDOM("<!doctype html><html><body></body></html>");
-// (global as any).window = dom.window as Window;
+(global as any).window = dom.window as Window;
 (global as any).document = dom.window.document;
 
 describe("Header Component", () => {

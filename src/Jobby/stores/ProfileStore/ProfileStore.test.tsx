@@ -9,13 +9,13 @@ describe("For Profile Store", () => {
     });
   });
 
-  test("For Fetching", async () => {
+  it("For Fetching", async () => {
     const store = new ProfileStore();
     try {
       await store.fetchProfile();
-      expect(store.ApiStatus).toBe("success");
+      await expect(store.ApiStatus).toBe("success");
     } catch (e) {
-      expect(store.ApiStatus).toBe("failure");
+      await expect(store.ApiStatus).toBe("failure");
     }
   });
 });

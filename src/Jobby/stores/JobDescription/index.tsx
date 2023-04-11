@@ -7,7 +7,7 @@ import {
 } from "../../services/JobFullDescription/index.api";
 
 class JobDescriptionStore {
-  @observable JobDescription: JobDescriptionData | undefined;
+  @observable JobDescription: any;
   @observable ApiStatus: ApiStatus = ApiStatus.loading;
 
   @action.bound

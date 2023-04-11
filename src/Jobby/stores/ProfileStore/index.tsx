@@ -1,8 +1,10 @@
 import { action, observable } from "mobx";
 
 import { ApiStatus, ProfileObjectType } from "../../interface";
-import { ProfileApi } from "../../services/ProfileApi/index.api";
-import { ProfileFixtureApi } from "../../services/ProfileApi/index.fixture";
+import {
+  fixtureProfileApi,
+  ProfileApi,
+} from "../../services/ProfileApi/index.api";
 
 class ProfileStore {
   @observable ProfileDetail: ProfileObjectType = {
@@ -28,7 +30,9 @@ class ProfileStore {
 
   @action.bound
   fetchFixtureData = () => {
-    return ProfileFixtureApi();
+    const response = fixtureProfileApi();
+    this.ProfileDetail = response;
+    this.ApiStatus = ApiStatus.success;
   };
 }
 

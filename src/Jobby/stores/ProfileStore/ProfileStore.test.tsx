@@ -9,13 +9,11 @@ describe("For Profile Store", () => {
     });
   });
 
-  it("For Fetching", async () => {
+  it("Fixture Data Fetching", () => {
     const store = new ProfileStore();
-    try {
-      await store.fetchProfile();
-      await expect(store.ApiStatus).toBe("success");
-    } catch (e) {
-      await expect(store.ApiStatus).toBe("failure");
-    }
+    store.fetchFixtureData();
+
+    expect(store.ProfileDetail).toBeDefined();
+    expect(store.ApiStatus).toBe("success");
   });
 });

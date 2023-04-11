@@ -9,4 +9,12 @@ describe("JobListStore", () => {
     expect(store.coustomApi).toHaveLength(0);
     expect(store.EmploymentType).toHaveLength(0);
   });
+
+  it("Fixture Data Fetching", () => {
+    const store = new JobListStore();
+    store.fetchFixtureData();
+
+    expect(store.jobList.length).toBe(60);
+    expect(store.ApiStatus).toBe("success");
+  });
 });

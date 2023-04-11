@@ -50,7 +50,9 @@ const Header = (props: Props) => {
             className="fa-solid fa-arrow-right-from-bracket"
             onClick={handleLogout}
           ></LogoutIcon>
-          <LogoutBtn onClick={handleLogout}>Logout</LogoutBtn>
+          <LogoutBtn id="LogoutBtnId" onClick={handleLogout}>
+            Logout
+          </LogoutBtn>
         </IconContainerDiv>
       </HeaderContainer>
     </HeaderWrapper>

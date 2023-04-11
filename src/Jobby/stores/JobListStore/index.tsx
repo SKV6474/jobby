@@ -1,10 +1,13 @@
 import { action, observable } from "mobx";
 
-import { ApiStatus } from "../../interface";
-import { callJobList } from "../../services/JobListServices/index.api";
+import { ApiStatus, JobListType } from "../../interface";
+import {
+  callJobList,
+  fixtureJobList,
+} from "../../services/JobListServices/index.api";
 
 class JobListStore {
-  @observable jobList = [];
+  @observable jobList: JobListType[] = [];
   @observable ApiStatus: ApiStatus = ApiStatus.loading;
   @observable coustomApi: string[] = [];
   // jobListContainer = [];
@@ -26,6 +29,13 @@ class JobListStore {
     } catch (e) {
       this.ApiStatus = ApiStatus.failure;
     }
+  };
+
+  @action.bound
+  fetchFixtureData = () => {
+    const response = fixtureJobList();
+    this.jobList = response;
+    this.ApiStatus = ApiStatus.success;
   };
 
   @action.bound

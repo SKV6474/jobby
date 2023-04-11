@@ -2,6 +2,7 @@ import Cookies from "js-cookie";
 
 import { JOBS_API } from "../../constants/ApiCalls";
 import { handleResponse } from "../../utils";
+import { jobListFixtureDataList } from "./index.fixture";
 
 export const callJobList = async (input: string[]) => {
   if (input.length > 0) {
@@ -22,4 +23,8 @@ export const callJobList = async (input: string[]) => {
 
     return handleResponse(Response);
   }
+};
+
+export const fixtureJobList = () => {
+  return jobListFixtureDataList;
 };

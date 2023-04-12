@@ -11,12 +11,13 @@ const dom = new JSDOM("<!doctype html><html><body></body></html>");
 describe("Header Component", () => {
   test("should replace the url to /login ", () => {
     render(
-      <BrowserRouter>
+      <MemoryRouter>
         <Route exact path="/" component={Header} />
-      </BrowserRouter>
+      </MemoryRouter>
     );
 
     const buttonElement = screen.getByRole("button");
+    console.log(buttonElement);
     buttonElement.click();
     const currentUrl = window.location.href;
     expect(currentUrl).toBe("/login");

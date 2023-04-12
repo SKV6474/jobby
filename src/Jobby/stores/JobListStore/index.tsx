@@ -1,10 +1,10 @@
 import { action, observable } from "mobx";
 
 import { ApiStatus, JobListType } from "../../interface";
-import {
-  callJobList,
-  fixtureJobList,
-} from "../../services/JobListServices/index.api";
+// import {
+//   callJobList,
+//   fixtureJobList,
+// } from "../../services/JobListServices/index.api";
 
 class JobListStore {
   @observable jobList: JobListType[] = [];
@@ -14,11 +14,27 @@ class JobListStore {
   EmploymentType: string = "";
   SearchValue: string = "";
   PackageRange: string = "";
+  JobListService: any;
+
+  constructor(service: any) {
+    // this.init();
+    this.JobListService = service;
+  }
+
+  // @action.bound
+  // init(){
+  //   this.jobList=[];
+  //   this.ApiStatus=ApiStatus.loading;
+  //   this.EmploymentType="";
+  //   this.SearchValue="";
+  //   this.PackageRange="";
+  //   this.coustomApi=[];
+  // }
 
   @action.bound
   fetchJobListData = async () => {
     try {
-      const Response = await callJobList(this.coustomApi);
+      const Response = await this.JobListService.callJobList(this.coustomApi);
       if (Response.data !== "none") {
         this.jobList = Response.data.jobs;
         // this.jobListContainer = Response.data.jobs;
@@ -33,7 +49,7 @@ class JobListStore {
 
   @action.bound
   fetchFixtureData = () => {
-    const response = fixtureJobList();
+    const response = this.JobListService.fixtureJobList();
     this.jobList = response;
     this.ApiStatus = ApiStatus.success;
   };

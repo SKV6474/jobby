@@ -19,7 +19,7 @@ const LogoTitleContainer = (props: LogoTitleContainerProps) => {
         <Logo src={companyLogo} alt="logo"></Logo>
       </LogoContainer>
       <TitleRatingContainer>
-        <div>{title}</div>
+        <div id="TitleId">{title}</div>
         <div>
           <Icons
             className="fa-solid fa-star"

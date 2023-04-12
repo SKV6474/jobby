@@ -11,5 +11,7 @@ describe("template spec", () => {
     cy.get("#FullTime").click();
 
     cy.get('[href="/jobs/d6019453-f864-4a2f-8230-6a9642a59466"]').click();
+
+    cy.contains("Visit").click();
   });
 });

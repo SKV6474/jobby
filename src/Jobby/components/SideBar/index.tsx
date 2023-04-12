@@ -34,7 +34,7 @@ const SideBar = observer((props: SideBarProps) => {
         <ProfileContainer>
           <div>
             <ProfileImg src={profile_image_url} alt="Profile"></ProfileImg>
-            <Name>{name}</Name>
+            <Name id="profileNameId">{name}</Name>
             <ShortBio>{short_bio}</ShortBio>
           </div>
         </ProfileContainer>

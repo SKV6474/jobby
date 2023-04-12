@@ -1,6 +1,8 @@
+import cypress from "cypress";
+
 describe("template spec", () => {
   it("From Home", () => {
-    cy.visit("http://localhost:3000/");
+    cy.visit("http://localhost:3001/");
     cy.viewport(1000, 800);
     cy.get("#usernameType").type("rahul");
     cy.get("#PasswordType").type("rahul@2021");

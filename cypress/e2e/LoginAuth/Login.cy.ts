@@ -1,23 +1,15 @@
-describe("The Login Page", () => {
+import cypress from "cypress";
+
+describe("for Stub Testing for login", () => {
   beforeEach(() => {
-    // cy.exec("npm run db:reset && npm run db:seed");
-
-    cy.visit("http://localhost:3000/");
-
-    cy.request("POST", "https://apis.ccbp.in/login", {
-      username: "rahul",
-      password: "rahul@2021",
-    }).its("body");
+    cy.intercept("POST", "https://apis.ccbp.in/login").as("users");
   });
-
-  it("sets auth cookie when logging in via form submission", function () {
+  it("Api", () => {
+    cy.visit("http://localhost:3001/login");
     cy.get("#usernameType").type("rahul");
-    cy.get("#PasswordType").type("rahul@2021");
-
+    cy.get("#PasswordType").type("rahul@202");
     cy.get("#LoginBtn").click();
-
-    cy.url().should("include", "/");
-
-    // cy.getCookies("jwt_token").should(null);
+    cy.wait("@users");
+    cy.get("#Error").should("have.text", "*username and password didn't match");
   });
 });

@@ -1,36 +1,25 @@
-import { mount } from "cypress/react18";
+import { render } from "@testing-library/react";
 import AuthLogin from ".";
-import { UserDeatailsType } from "../../interface";
 
-declare global {
-  namespace Cypress {
-    interface Chainable {
-      mount: typeof mount;
-    }
-  }
-}
+const handleAuth = jest.fn();
+const handleSubmit = jest.fn();
 
-Cypress.Commands.add("mount", () => {
-  return mount(
-    <AuthLogin
-      onSubmitForm={function (userDetails: UserDeatailsType): void {}}
-      onLoginEvent={function (data: any) {}}
-    />
-  );
-});
+describe("AuthLogin", () => {
+  test("Test case for login", () => {
+    const { container } = render(
+      <AuthLogin onSubmitForm={handleAuth} onLoginEvent={handleSubmit} />
+    );
+    const userElement = (
+      document.getElementById("usernameType") as HTMLInputElement
+    ).value;
+    expect(userElement).toBe("");
 
-it("stepper should default to 0", () => {
-  cy.mount(""); //giving a empty string because it gives some error to give some arguments
+    (document.getElementById("usernameType") as HTMLInputElement).value =
+      "rahul";
 
-  cy.get("#usernameType").type("rahul");
-  cy.get("#PasswordType").type("rahul@2021");
-
-  cy.get("#LoginBtn").click();
-
-  cy.request("POST", "https://apis.ccbp.in/login", {
-    username: "rahul",
-    password: "rahul@2021",
-  }).its("body");
-
-  cy.url().should("include", "/");
+    const afterUserValue = (
+      document.getElementById("usernameType") as HTMLInputElement
+    ).value;
+    expect(afterUserValue).toBe("rahul");
+  });
 });

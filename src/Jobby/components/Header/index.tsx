@@ -40,10 +40,10 @@ const Header = (props: Props) => {
           </div>
         </LinkContainer>
         <IconContainerDiv>
-          <IconLinks to={HOME}>
+          <IconLinks id="HomeLinkId" to={HOME}>
             <i className="fa-solid fa-house"></i>
           </IconLinks>
-          <IconLinks to={JOB_ROUTE}>
+          <IconLinks id="JobListId" to={JOB_ROUTE}>
             <i className="fa-solid fa-briefcase"></i>
           </IconLinks>
           <LogoutIcon

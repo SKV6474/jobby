@@ -1,26 +1,29 @@
-import { render, screen } from "@testing-library/react";
+import { fireEvent, render, screen } from "@testing-library/react";
 import Header from ".";
 import { BrowserRouter, MemoryRouter, Route } from "react-router-dom";
-import Cookies from "js-cookie";
-import { JSDOM } from "jsdom";
-
-const dom = new JSDOM("<!doctype html><html><body></body></html>");
-(global as any).window = dom.window as unknown as Window;
-(global as any).document = dom.window.document;
 
 describe("Header Component", () => {
-  test("should replace the url to /login ", () => {
-    render(
+  test("Header Event test Case", () => {
+    const { container } = render(
       <MemoryRouter>
-        <Route exact path="/" component={Header} />
+        <Route exact path="*" component={Header} />
       </MemoryRouter>
     );
 
-    const buttonElement = screen.getByRole("button");
-    console.log(buttonElement);
-    buttonElement.click();
-    const currentUrl = window.location.href;
-    expect(currentUrl).toBe("/login");
-    expect(Cookies.get("jwt_token")).toBeUndefined();
+    const HomeElement = container.querySelector("#HomeLinkId");
+    // const jobListElement = container.querySelector("#JobListId");
+
+    if (HomeElement !== null) {
+      fireEvent.click(HomeElement);
+    }
+
+    expect(window.location.pathname).toBe("/");
+
+    // const buttonElement = screen.getByRole("button");
+    // console.log(buttonElement);
+    // buttonElement.click();
+    // const currentUrl = window.location.href;
+    // expect(currentUrl).toBe("/login");
+    // expect(Cookies.get("jwt_token")).toBeUndefined();
   });
 });

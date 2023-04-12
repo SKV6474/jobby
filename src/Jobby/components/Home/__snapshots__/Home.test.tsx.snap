@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="sc-beqWaB lkEORj"
+>
+  <div
+    className="sc-gueYoa cjmCoc"
+  >
+    <div
+      className="sc-dmqHEX fQGRlX"
+    >
+      Find The Job That Fits Your Life
+    </div>
+    <div
+      className="sc-hLseeU dtcKob"
+    >
+      Millions of people are searching for jobs, salary information, company reviews. Find the job that fits your abilities and potential.
+    </div>
+    <div>
+      <a
+        aria-current={null}
+        className="sc-eDDNvR jAwwND"
+        href="/jobs"
+        onClick={[Function]}
+      >
+        Find Jobs
+      </a>
+    </div>
+  </div>
+</div>
+`;
